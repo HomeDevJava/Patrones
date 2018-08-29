@@ -12,7 +12,13 @@ public abstract class Figura implements Shape {
 		// TODO Auto-generated method stub
 	}
 	
-	public Shape clonar() {
+	@Override
+	public Shape clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return (Shape) super.clone();
+	}
+	
+	/*public Shape clonar() {
 		Figura clone= null;
 		try {
 			clone=(Figura) super.clone();
@@ -21,7 +27,7 @@ public abstract class Figura implements Shape {
 		}
 		
 		return  clone;
-	}
+	}*/
 
 	public String getId() {
 		return id;
@@ -43,6 +49,8 @@ public abstract class Figura implements Shape {
 	public String toString() {
 		return "Figura [id=" + id + ", type=" + type + "]";
 	}
+
+	
 	
 	
 	
