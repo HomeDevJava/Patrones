@@ -5,7 +5,7 @@ public class AbstractFactoryImpl {
 	public static void main(String[] args) {
 		
 		FabricaAbstracta fabricaBD=FabricaProductora.getFactory("BD");
-		IConexionBD cxBD1= fabricaBD.getBD("SQL");		
+		IConexionBD cxBD1= fabricaBD.getBD("MYSQL");		
 		cxBD1.conectar();
 				
 		FabricaAbstracta fabricaREST= FabricaProductora.getFactory("REST");

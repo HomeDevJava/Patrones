@@ -1,10 +1,13 @@
 package FactoryPattern;
 
-/*el patron fabrica devuelve un objeto atraves de un metodo publico,
- *  del mismo tipo que la Interfaz, en este caso Shape*/
+/*paso 3.- Crear la factory
+ * el patron fabrica devuelve un objeto atraves de un metodo publico,
+ * del mismo tipo que la Interfaz, en este caso Shape
+ */
 
 public class ShapeFactory {
 
+	//es importante que este metodo sea del tipo de la interface Shape
 	public Shape getShape(String shapeTipo) {
 		if (shapeTipo == null) {
 			return null;

@@ -5,6 +5,7 @@ public class ConexionSQLServer implements IConexionBD {
 	private String puerto;
 	private String usuario;
 	private String psw;
+	private static ConexionSQLServer instance;
 	
 	public ConexionSQLServer() {
 		this.setHost("localhost");
@@ -21,6 +22,13 @@ public class ConexionSQLServer implements IConexionBD {
 	@Override
 	public void desconectar() {
 		System.out.println("Se desconecto a SQL Server");
+	}
+	
+	public static ConexionSQLServer getInstance() {
+		if(instance == null) {
+			instance= new ConexionSQLServer();
+		}
+		return instance;
 	}
 
 	public String getHost() {return host;}

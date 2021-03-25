@@ -1,8 +1,8 @@
 package AbstractFactoryPattern;
 
-public interface FabricaAbstracta {
+public abstract class FabricaAbstracta {
 	
-	IConexionBD getBD(String motor);
-	IConexionREST getREST(String area);
+	abstract IConexionBD getBD(String motor);
+	abstract IConexionREST getREST(String area);
 
 }

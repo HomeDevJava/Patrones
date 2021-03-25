@@ -6,8 +6,9 @@ public class ConexionMysql implements IConexionBD {
 	private String puerto;
 	private String usuario;
 	private String psw;
+	private static ConexionMysql instance;
 	
-	public ConexionMysql() {
+	private ConexionMysql() {
 		this.setHost("localhost");
 		this.setPuerto("3306");
 		this.setUsuario("root");
@@ -26,6 +27,13 @@ public class ConexionMysql implements IConexionBD {
 		// TODO Auto-generated method stub
 		System.out.println("Se desconecto de Mysql");
 
+	}
+	
+	public static ConexionMysql getInstance() {
+		if(instance == null) {
+			instance= new ConexionMysql();
+		}
+		return instance;
 	}
 
 	public String getHost() {

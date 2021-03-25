@@ -1,14 +1,14 @@
 package AbstractFactoryPattern;
 
-public class ConexionRESTfabrica implements FabricaAbstracta{
+public class ConexionRESTfabrica extends FabricaAbstracta{
 
 	@Override
-	public IConexionBD getBD(String motor) {
+	IConexionBD getBD(String motor) {
 		return null;
 	}
 
 	@Override
-	public IConexionREST getREST(String area) {
+	IConexionREST getREST(String area) {
 		if(area == null)
 			System.out.println("No se ha especificado motor BD");
 		if(area.equalsIgnoreCase("COMPRAS"))
